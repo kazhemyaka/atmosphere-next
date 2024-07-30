@@ -1,14 +1,14 @@
 import type { FC, PropsWithChildren } from "react";
 
 import { HomeHeader } from "@/components/header";
+import { HomeFooter } from "@/components/footer";
 
-interface HomeLayoutProps extends PropsWithChildren {}
-
-const HomeLayout: FC<HomeLayoutProps> = ({ children }) => {
+const HomeLayout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <div className="flex flex-col h-screen">
       <HomeHeader />
       <main className="flex-grow">{children}</main>
+      <HomeFooter />
     </div>
   );
 };

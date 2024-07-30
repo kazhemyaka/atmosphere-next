@@ -8,9 +8,7 @@ export const metadata: Metadata = {
   title: "Atmosphere",
 };
 
-interface LayoutProps extends PropsWithChildren {}
-
-const Layout: FC<LayoutProps> = ({ children }) => {
+const RootLayout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={nunito.className}>{children}</body>
@@ -18,4 +16,4 @@ const Layout: FC<LayoutProps> = ({ children }) => {
   );
 };
 
-export default Layout;
+export default RootLayout;
