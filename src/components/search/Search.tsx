@@ -1,17 +1,17 @@
 "use client";
 
-import type { FC } from "react";
+import type { FC, FormEvent } from "react";
 import { usePathname, useRouter } from "next/navigation";
 
 const Search: FC = () => {
   const router = useRouter();
   const pathname = usePathname();
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const city = e.currentTarget.city.value;
-    const currentPath = pathname.split("/")[2] || "now";
-    router.push(`/weather/${currentPath}/${city}`);
+    const currentPath = pathname.split("/")[3] || "now";
+    router.push(`/weather/${city}/${currentPath}`);
   };
 
   return (
