@@ -1,10 +1,11 @@
 import type { FC } from "react";
 import { zilla_slab } from "@/config/fonts";
 import { Search } from "@/components/search";
+import { Section } from "@/components/layouts";
 
 const Home: FC = () => {
   return (
-    <section className="px-5 sm:px-10 text-center flex flex-col gap-6 h-full justify-center items-center">
+    <Section className="text-center flex flex-col gap-6 h-full justify-center items-center">
       <h1
         className={`text-4xl sm:text-6xl font-bold bg-gradient-to-bl from-dodger-blue to-cyan-600 bg-clip-text text-transparent ${zilla_slab.className}`}
       >
@@ -16,7 +17,7 @@ const Home: FC = () => {
         information at your fingertips!
       </p>
       <Search />
-    </section>
+    </Section>
   );
 };
 

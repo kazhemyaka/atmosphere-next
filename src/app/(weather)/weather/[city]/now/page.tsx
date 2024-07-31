@@ -1,7 +1,8 @@
 import type { FC } from "react";
+import { Section } from "@/components/layouts";
 
 const Page: FC = () => {
-  return <p>Now</p>;
+  return <Section>Now</Section>;
 };
 
 export default Page;
