@@ -1,7 +1,7 @@
 "use client";
 
 import type { FC } from "react";
-import { Search } from "../search";
+import Search from "@/components/Search";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useState, useEffect } from "react";

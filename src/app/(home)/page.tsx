@@ -1,6 +1,6 @@
 import type { FC } from "react";
 import { zilla_slab } from "@/config/fonts";
-import { Search } from "@/components/search";
+import Search from "@/components/Search";
 import { Section } from "@/components/layouts";
 
 const Home: FC = () => {
