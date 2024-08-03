@@ -1,13 +1,42 @@
-import type { FC } from "react";
+"use client";
+
+import { FC, useRef, useEffect } from "react";
 import { zilla_slab } from "@/config/fonts";
 import Search from "@/components/Search";
 import { Section } from "@/components/layouts";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import SplitType from "split-type";
 
 const Home: FC = () => {
+  const titleRef = useRef<HTMLHeadingElement>(null);
+
+  useGSAP(() => {
+    if (titleRef.current) {
+      const title = new SplitType(titleRef.current, {
+        types: "words",
+      });
+
+      gsap.from(title.words, {
+        y: "100%",
+        opacity: 0,
+        duration: 0.35,
+        ease: "circ.out",
+        stagger: 0.1,
+        onStart: () => {
+          if (titleRef.current) {
+            titleRef.current.classList.remove("opacity-0");
+          }
+        },
+      });
+    }
+  }, []);
+
   return (
-    <Section className="text-center flex flex-col gap-6 h-full justify-center items-center">
+    <Section className="text-center flex flex-col gap-6 h-full justify-center items-center relative overflow-hidden">
       <h1
-        className={`text-4xl sm:text-6xl font-bold bg-gradient-to-bl from-dodger-blue to-cyan-600 bg-clip-text text-transparent ${zilla_slab.className}`}
+        ref={titleRef}
+        className={`opacity-0 text-dodger-blue text-4xl sm:text-6xl font-bold ${zilla_slab.className}`}
       >
         Discover your city's weather with Atmosphere!
       </h1>
