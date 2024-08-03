@@ -5,7 +5,7 @@ import { WeatherLayout } from "@/components/layouts";
 import { useWeather } from "@/context/weather";
 import { fetchWeather } from "@/actions/weather";
 import { useParams } from "next/navigation";
-import { WeatherData } from "@/context/weather";
+import { WeatherData } from "@/types";
 
 const WeatherPageLayout: FC<PropsWithChildren> = ({ children }) => {
   const { city } = useParams();

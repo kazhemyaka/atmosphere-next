@@ -1,15 +1,7 @@
 "use client";
 
 import { createContext, useContext, useState, ReactNode, FC } from "react";
-
-export interface WeatherData {
-  location: {
-    name: string;
-  };
-  current: {
-    temp_c: number;
-  };
-}
+import { WeatherData } from "@/types";
 
 interface WeatherContextProps {
   weatherData: WeatherData | null;
