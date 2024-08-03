@@ -48,6 +48,12 @@ const HomeLayout: FC<PropsWithChildren> = ({ children }) => {
     document.addEventListener("mouseenter", handleMouseEnter);
     document.addEventListener("mouseleave", handleMouseLeave);
     document.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      document.removeEventListener("mouseenter", handleMouseEnter);
+      document.removeEventListener("mouseleave", handleMouseLeave);
+      document.removeEventListener("mousemove", handleMouseMove);
+    };
   });
 
   return (
