@@ -1,5 +1,5 @@
-import type { FC, PropsWithChildren } from "react";
-import type { Metadata } from "next";
+import { FC, PropsWithChildren } from "react";
+import { Metadata } from "next";
 import { WeatherProvider } from "@/context/weather";
 
 import "@/styles/globals.css";
@@ -7,6 +7,9 @@ import { nunito } from "@/config/fonts";
 
 export const metadata: Metadata = {
   title: "Atmosphere",
+  icons: {
+    icon: "/images/favicon/logo.ico",
+  },
 };
 
 const RootLayout: FC<PropsWithChildren> = ({ children }) => {
