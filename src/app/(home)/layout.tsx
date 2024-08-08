@@ -1,4 +1,4 @@
-import type { FC, PropsWithChildren } from "react";
+import { FC, PropsWithChildren } from "react";
 import { HomeLayout } from "@/components/layouts";
 
 const HomePageLayout: FC<PropsWithChildren> = ({ children }) => {
