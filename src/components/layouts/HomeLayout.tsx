@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  MouseEvent,
-  MouseEventHandler,
-  useRef,
-  type FC,
-  type PropsWithChildren,
-} from "react";
+import { MouseEvent, useRef, FC, PropsWithChildren } from "react";
 import { HomeHeader } from "@/components/header";
 import { HomeFooter } from "@/components/footer";
 import { gsap } from "gsap";
