@@ -1,4 +1,9 @@
-import type { FC } from "react";
+"use client";
+
+import { FC, useEffect, useState } from "react";
+import Image from "next/image";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 interface CityPhotoProps {
   cityPhoto: string;
@@ -13,9 +18,30 @@ const CityPhoto: FC<CityPhotoProps> = ({
   photoAuthor,
   photoLink,
 }) => {
+  const [isLoadingImage, setIsLoadingImage] = useState(true);
+
+  useEffect(() => {
+    setIsLoadingImage(true);
+  }, [cityPhoto, setIsLoadingImage]);
+
   return (
     <div className="w-full h-64 sm:h-80 xl:h-full xl:basis-full relative rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-      <img src={cityPhoto} alt={city} className="w-full h-full object-cover" />
+      {isLoadingImage && (
+        <Skeleton
+          className="absolute inset-0 w-full h-full"
+          style={{ borderRadius: "12px" }}
+        />
+      )}
+      <Image
+        src={cityPhoto}
+        alt={city}
+        className={`w-full h-full object-cover transition-opacity duration-300 ${
+          isLoadingImage ? "opacity-0" : "opacity-100"
+        }`}
+        layout="fill"
+        objectFit="cover"
+        onLoadingComplete={() => setIsLoadingImage(false)}
+      />
       <span className="bg-white absolute bottom-3 right-3 p-2 rounded-lg shadow-lg">
         by {photoAuthor},{" "}
         <a href={photoLink} className="hover:text-dodger-blue transition">

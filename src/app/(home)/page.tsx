@@ -1,6 +1,6 @@
 "use client";
 
-import { FC, useRef, useEffect } from "react";
+import { FC, useRef } from "react";
 import { zilla_slab } from "@/config/fonts";
 import Search from "@/components/Search";
 import { Section } from "@/components/layouts";
@@ -38,7 +38,7 @@ const Home: FC = () => {
         ref={titleRef}
         className={`opacity-0 text-dodger-blue text-4xl sm:text-6xl font-bold ${zilla_slab.className}`}
       >
-        Discover your city's weather with Atmosphere!
+        Discover your city&apos;s weather with Atmosphere!
       </h1>
       <p className="w-4/5 sm:w-6/12">
         Explore the latest weather updates for any city with Atmosphere. Just

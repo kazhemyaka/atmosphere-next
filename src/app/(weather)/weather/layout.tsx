@@ -28,7 +28,7 @@ const WeatherPageLayout: FC<PropsWithChildren> = ({ children }) => {
     };
 
     fetchData();
-  }, [city]);
+  }, [city, setWeatherData, setCityPhoto, setIsLoading, setError]);
 
   return <WeatherLayout>{children}</WeatherLayout>;
 };

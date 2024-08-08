@@ -15,7 +15,7 @@ const UpdateMap: FC<UpdateMapProps> = ({ center, zoom }) => {
   const map = useMap();
   useEffect(() => {
     map.setView(center, zoom);
-  }, [center, zoom]);
+  }, [center, zoom, map]);
   return null;
 };
 
