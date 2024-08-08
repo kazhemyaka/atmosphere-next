@@ -39,6 +39,7 @@ const Search: FC = () => {
           id="city"
           className="block w-full rounded-md border border-gray-400 py-1.5 pl-10 pr-3 text-gray-900 placeholder-gray-400 sm:text-sm focus:outline-none focus:ring-1 focus:ring-dodger-blue focus:border-dodger-blue transition ease-in-out duration-150"
           placeholder="Search for a city"
+          required
         />
       </div>
     </form>
