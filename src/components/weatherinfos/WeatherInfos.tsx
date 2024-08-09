@@ -8,7 +8,7 @@ interface WeatherInfosProps {
     desc: string;
     value: string;
   }[];
-  center: boolean;
+  center?: boolean;
 }
 
 const WeatherInfos: FC<WeatherInfosProps> = ({ weatherInfos, center }) => {
