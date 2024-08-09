@@ -7,6 +7,7 @@ import { Section } from "@/components/layouts";
 import Title from "@/components/Title";
 import { HourlyWeatherCard } from "@/components/weathercards";
 import { useWeather } from "@/context/weather";
+import WeatherData from "@/types/WeatherData";
 
 const Page: FC = () => {
   const { weatherData, isLoading, error } = useWeather();
@@ -27,13 +28,15 @@ const Page: FC = () => {
             city={weatherData.location.name}
           />
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 mt-10">
-            {weatherData.forecast.forecastday[0].hour.map((hour) => (
-              <HourlyWeatherCard
-                key={hour.time_epoch}
-                hour={hour}
-                timeZone={weatherData.location.tz_id}
-              />
-            ))}
+            {weatherData.forecast.forecastday[0].hour.map(
+              (hour: WeatherData["forecast"]["forecastday"][0]["hour"][0]) => (
+                <HourlyWeatherCard
+                  key={hour.time_epoch}
+                  hour={hour}
+                  timeZone={weatherData.location.tz_id}
+                />
+              )
+            )}
           </div>
         </Section>
       )}

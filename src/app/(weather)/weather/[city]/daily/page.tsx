@@ -7,6 +7,7 @@ import { Section } from "@/components/layouts";
 import Title from "@/components/Title";
 import { DailyWeatherCard } from "@/components/weathercards";
 import { useWeather } from "@/context/weather";
+import WeatherData from "@/types/WeatherData";
 
 const Page: FC = () => {
   const { weatherData, isLoading, error } = useWeather();
@@ -27,9 +28,11 @@ const Page: FC = () => {
             city={weatherData.location.name}
           />
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 mt-10">
-            {weatherData.forecast.forecastday.map((day) => (
-              <DailyWeatherCard key={day.date_epoch} day={day} />
-            ))}
+            {weatherData.forecast.forecastday.map(
+              (day: WeatherData["forecast"]["forecastday"][0]) => (
+                <DailyWeatherCard key={day.date_epoch} day={day} />
+              )
+            )}
           </div>
         </Section>
       )}
