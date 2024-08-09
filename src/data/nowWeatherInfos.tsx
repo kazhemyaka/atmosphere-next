@@ -7,7 +7,7 @@ import {
   FaWind,
 } from "react-icons/fa6";
 import { FaTachometerAlt } from "react-icons/fa";
-import { WeatherData } from "@/types";
+import WeatherData from "@/types/WeatherData";
 
 const nowWeatherInfos = (weatherData: WeatherData["current"]) => [
   {
