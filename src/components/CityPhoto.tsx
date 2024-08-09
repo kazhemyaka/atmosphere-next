@@ -38,9 +38,9 @@ const CityPhoto: FC<CityPhotoProps> = ({
         className={`w-full h-full object-cover transition-opacity duration-300 ${
           isLoadingImage ? "opacity-0" : "opacity-100"
         }`}
-        layout="fill"
-        objectFit="cover"
-        onLoadingComplete={() => setIsLoadingImage(false)}
+        fill
+        onLoad={() => setIsLoadingImage(false)}
+        priority
       />
       <span className="bg-white absolute bottom-3 right-3 p-2 rounded-lg shadow-lg">
         by {photoAuthor},{" "}
