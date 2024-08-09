@@ -34,14 +34,11 @@ interface WeatherData {
           maxwind_kph: number;
           totalprecip_mm: number;
           avghumidity: number;
-          daily_will_it_rain: number;
-          daily_chance_of_rain: string;
-          daily_will_it_snow: number;
-          daily_chance_of_snow: string;
           condition: {
             text: string;
             code: number;
           };
+          uv: number;
         };
         hour: [
           {

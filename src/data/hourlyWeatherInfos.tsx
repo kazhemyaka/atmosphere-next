@@ -9,7 +9,7 @@ import {
 import { FaTachometerAlt } from "react-icons/fa";
 import { WeatherData } from "@/types";
 
-const HourlyWeatherInfos = (
+const hourlyWeatherInfos = (
   weatherData: WeatherData["forecast"]["forecastday"][0]["hour"][0]
 ) => [
   {
@@ -54,4 +54,4 @@ const HourlyWeatherInfos = (
   },
 ];
 
-export default HourlyWeatherInfos;
+export default hourlyWeatherInfos;
