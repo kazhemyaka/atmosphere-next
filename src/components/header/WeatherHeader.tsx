@@ -62,7 +62,7 @@ const WeatherHeader: FC = () => {
               {elements.map((element, index) => (
                 <li key={index}>
                   <Link
-                    href={`${element.href}/${city || ""}`}
+                    href={`/weather/${city || ""}/${element.href}/`}
                     className="text-2xl hover:text-dodger-blue transition"
                     onClick={() => setOpen(false)}
                   >
@@ -79,7 +79,7 @@ const WeatherHeader: FC = () => {
           {elements.map((element, index) => (
             <li key={index}>
               <Link
-                href={`${element.href}/${city || ""}`}
+                href={`/weather/${city || ""}/${element.href}/`}
                 className="text-base hover:text-dodger-blue transition"
               >
                 {element.name}
