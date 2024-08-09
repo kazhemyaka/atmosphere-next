@@ -5,7 +5,7 @@ import Search from "@/components/Search";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import Image from "next/image";
-import { weatherHeaderElements } from "@/data";
+import weatherHeaderElements from "@/data/weatherHeaderElements";
 import HeaderNavList from "./HeaderNavList";
 
 const WeatherHeader: FC = () => {

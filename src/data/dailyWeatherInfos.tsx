@@ -1,5 +1,5 @@
 import { FaWind, FaCloudShowersHeavy, FaDroplet, FaSun } from "react-icons/fa6";
-import { WeatherData } from "@/types";
+import WeatherData from "@/types/WeatherData";
 
 const dailyWeatherInfos = (
   weatherData: WeatherData["forecast"]["forecastday"][0]["day"]

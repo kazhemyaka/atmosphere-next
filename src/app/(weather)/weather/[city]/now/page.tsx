@@ -4,7 +4,7 @@ import { FC, Fragment } from "react";
 import { Section } from "@/components/layouts";
 import { useWeather } from "@/context/weather";
 import { WeatherInfos } from "@/components/weatherinfos";
-import { nowWeatherInfos } from "@/data";
+import nowWeatherInfos from "@/data/nowWeatherInfos";
 import CityMap from "@/components/CityMap";
 import Title from "@/components/Title";
 import TempWithDesc from "@/components/TempWithDesc";

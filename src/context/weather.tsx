@@ -1,8 +1,8 @@
 "use client";
 
 import { createContext, useContext, useState, ReactNode, FC } from "react";
-import { WeatherData } from "@/types";
-import { CityPhoto } from "@/types";
+import WeatherData from "@/types/WeatherData";
+import CityPhoto from "@/types/CityPhoto";
 
 interface WeatherContextProps {
   weatherData: WeatherData | null;

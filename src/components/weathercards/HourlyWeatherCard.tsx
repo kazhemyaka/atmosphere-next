@@ -1,10 +1,10 @@
-import { WeatherData } from "@/types";
+import WeatherData from "@/types/WeatherData";
 import { FC } from "react";
 import DateTime from "@/components/DateTime";
 import WeatherIcon from "@/components/WeatherIcon";
 import TempWithDesc from "@/components/TempWithDesc";
 import { WeatherInfos } from "../weatherinfos";
-import { hourlyWeatherInfos } from "@/data";
+import hourlyWeatherInfos from "@/data/hourlyWeatherInfos";
 
 interface HourlyWeatherCardProps {
   hour: WeatherData["forecast"]["forecastday"][0]["hour"][0];
